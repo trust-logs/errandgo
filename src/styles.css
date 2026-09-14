@@ -47,3 +47,16 @@ footer{background:var(--dark);color:#fff;padding:30px max(24px,calc((100% - 1220
 @media(max-width:360px){
   header{padding:0 12px}.brand{gap:7px}.brand b{font-size:18px}.hero{padding-left:14px;padding-right:14px}h1{font-size:32px}.hero-panel{min-height:270px}.panel-main{padding:21px 17px}.panel-main h3{font-size:18px}.floating-card{transform:scale(.92);transform-origin:left bottom}.services,.tasks{padding-left:14px;padding-right:14px}.earn{margin-left:10px;margin-right:10px;padding:28px 18px}.earn-stats{gap:6px}.earn-stats div{padding-left:7px}.earn-stats strong{font-size:15px}
 }
+
+
+/* Bottom navigation: always centered to the application shell. */
+.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(1220px,calc(100vw - 32px));min-height:76px;padding:10px 22px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:8px;background:rgba(255,255,255,.97);border:1px solid var(--border);border-bottom:0;border-radius:22px 22px 0 0;box-shadow:0 -12px 35px rgba(7,59,37,.12);backdrop-filter:blur(18px);z-index:80}
+.bottom-nav button{min-width:0;min-height:52px;background:transparent;color:var(--gray);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;font-weight:700;transition:.2s}
+.bottom-nav button:hover{color:var(--green);background:var(--mint)}
+.bottom-nav button svg{width:20px;height:20px;stroke-width:2}
+.bottom-nav-plus{width:58px!important;height:58px!important;min-height:58px!important;justify-self:center;border-radius:50%!important;background:linear-gradient(145deg,var(--green2),var(--green))!important;color:#fff!important;box-shadow:0 10px 28px rgba(18,168,90,.30);transform:translateY(-15px);border:5px solid var(--bg)!important}
+.bottom-nav-plus:hover{color:#fff!important;background:linear-gradient(145deg,var(--green2),var(--green))!important;transform:translateY(-17px) scale(1.03)}
+.bottom-nav-plus svg{width:28px!important;height:28px!important}
+.app{padding-bottom:92px}
+@media(max-width:800px){.bottom-nav{width:100%;min-height:74px;padding-left:10px;padding-right:10px;border-radius:20px 20px 0 0}.bottom-nav button{min-height:50px}.bottom-nav-plus{width:60px!important;height:60px!important;min-height:60px!important}.app{padding-bottom:88px}}
+@media(max-width:360px){.bottom-nav{padding-left:4px;padding-right:4px;gap:2px}.bottom-nav button{font-size:9px}.bottom-nav button svg{width:19px;height:19px}}
